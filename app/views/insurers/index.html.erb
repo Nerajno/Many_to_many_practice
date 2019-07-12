@@ -4,7 +4,6 @@
   <% @insurers.each do |insurer| %>
         <li>Insurer: <%= link_to(insurer.name, insurer_path(insurer)) %></li>
   <% end %>
-  
- 
-  
   </ul>
+
+  <%= link_to "Pets", pets_path %>

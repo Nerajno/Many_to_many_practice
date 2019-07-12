@@ -1,9 +1,8 @@
 <h1>All Insurers</h1>
 
-<ul></ul>
+<ul>
   <% @insurers.each do |insurer| %>
-        <li>Insurer: <%= link_to(insurer.name, insurer_path(song)) %></li>
-  <%byebug%>
+        <li>Insurer: <%= link_to(insurer.name, insurer_path(insurer)) %></li>
   <% end %>
   
  

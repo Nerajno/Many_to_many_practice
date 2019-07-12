@@ -10,18 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_11_225222) do
+ActiveRecord::Schema.define(version: 2019_07_12_005747) do
 
   create_table "insurers", force: :cascade do |t|
     t.string "name"
-    t.integer "vet_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "pets", force: :cascade do |t|
     t.string "name"
-    t.integer "vet_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -30,6 +28,8 @@ ActiveRecord::Schema.define(version: 2019_07_11_225222) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "insurer_id"
+    t.integer "pet_id"
   end
 
 end

@@ -1,3 +1,4 @@
 class Pet < ApplicationRecord
-    belongs_to :vet
+    has_many :vets
+    has_many :insurers, through: :vets
 end

@@ -7,22 +7,23 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'faker'
-include Faker
-
-5.times do
-    Vet.create(
-        name:Faker::Name.name
-    )
-end
 
 5.times do
     Pet.create(
-        name:Faker::Name.name
+        name:Faker::Name.first_name
+        )
+    end
+    
+5.times do
+    Insurer.create(
+        name:Faker::Company.name
     )
 end
 
 5.times do
-    Insurer.create(
-        name:Faker::Name.name
+    Vet.create(
+        name:Faker::Name.name,
+        insurer_id: Insurer.all.sample.id,
+        pet_id: Pet.all.sample.id
     )
 end
